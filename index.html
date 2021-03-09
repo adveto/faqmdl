@@ -143,8 +143,15 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 <script type="text/javascript">
-var query = location.search.slice(1);
+  
+
+  var te = 0;
+
+    function modifyText(t) {
+      var query = location.search.slice(1);
 var partes = query.split('&');
 var data = {};
 partes.forEach(function (parte) {
@@ -155,15 +162,6 @@ partes.forEach(function (parte) {
 });
 
 var url = data['src'];
-
-  </script>
-
-<script type="text/javascript">
-  
-
-  var te = 0;
-
-    function modifyText(t) {
       t++;
 
       if (t == 1) {
@@ -172,7 +170,7 @@ var url = data['src'];
       }
       
       if (t == 2) {
-        window.location.replace('https://mestredarenda.com/');
+        window.location.replace('https://mestredarenda.com/' + query);
       }
     }
 
